@@ -7,13 +7,37 @@ body {
   background-color: lightgreen;
   min-height: 100vh;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
 }
-.one { background-color: yellowgreen; }
-.two { background-color: yellow; }
-.three { background-color: gold; }
-.four { background-color: goldenrod; }
-.five { background-color: orange }
-.six { background-color: tomato}
-.seven { background-color: orangered; }
-.eight { background-color: red; }
-.nine { background-color: crimson; }
+.one { background-color: yellowgreen; 
+  grid-column: 1 / span 4;
+  grid-row-end: span 1;
+}
+.two { background-color: yellow; 
+  grid-column: 1 / span 2;
+  grid-row-end: span 2;
+}
+.three { background-color: gold; 
+  grid-column: 3 / span 2;
+}
+.four { background-color: goldenrod; 
+  grid-column: 3 / span 1;
+  grid-row-end: span 2;
+}
+.five { background-color: orange;
+  grid-row-end: span 2;  
+}
+.six { background-color: tomato;
+  grid-column: 1 / span 2;
+  grid-row-end: span 2;
+}
+.seven { background-color: orangered; 
+  grid-column-end: span 2;
+}
+.eight { background-color: red; 
+  grid-column: 1 / span 2;
+}
+.nine { background-color: crimson; 
+  grid-column-end: span 2;
+}
